@@ -1,6 +1,6 @@
   {
   "title": "pg_tileserv and pg_featureserv",
-  "description": "Service enabling your spatial data with pg_tileserv and pg_featureserv",
+  "description": "1 Service enabling your spatial data with pg_tileserv and pg_featureserv",
   "difficulty": "beginner",
   "time": "5 minutes",
   "details": {
