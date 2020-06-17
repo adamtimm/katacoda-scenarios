@@ -19,8 +19,4 @@ curl http://s3.cleverelephant.ca/nyc_data.sql.gz |gzip -dc | PGPASSWORD="passwor
 
 clear
 : 'Ready to go'
-PGPASSWORD="password" psql -h localhost -U groot nyc
-
-docker pull timmam/pg_tileserv:Katacoda
-docker pull timmam/pg_featureserv:Katacoda
 
