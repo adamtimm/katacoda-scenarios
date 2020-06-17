@@ -14,3 +14,11 @@ To add the container to your postgis implentation, you'll need the connection in
 
 ```docker run -p 7800:7800 --env=DATABASE_URL=postgres://groot:password@localhost/nyc timmam/pg_tileserv:Katacoda```{{execute}}
 
+"environment": {
+    "showdashboard": true,
+    "dashboards": [{"name": "URL", "href": "http://localhost:7800"},
+        {"name": "Port 7800", "port": 7800},
+        {"name": "Placeholder", "href": "https://[[HOST_SUBDOMAIN]]-7800-[[KATACODA_HOST]].environments.katacoda.com"}],
+    "uilayout": "terminal-iframe"
+}
+
