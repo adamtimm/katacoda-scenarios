@@ -7,3 +7,10 @@ With the release of PostGIS 2.4, PostGIS introduced the ability to generate vect
 pg_tileserv is a lightweight service that enables develoeprs to more easily access the vector tile generation capability in PostGIS via an open API. It is designed to run in both a "cloud native" environment such as Kubernetes, as well as a more traditional server architecture. 
 
 This exercise will show you the steps to take to add pg_tileserv to your PostGIS implementation. 
+
+To add pg_tileserv to your PostGIS database, you need to either download the [source code](https://github.com/CrunchyData/pg_tileserv), download the binaries, or one of our supported containers. We've already pre-staged the container of pg_tileserv for this scenario. 
+
+To add the container to your postgis implentation, you'll need the connection info and username and password. 
+
+docker run -p 7800:7800 timmam/pg_tileserv:Katacoda 
+
