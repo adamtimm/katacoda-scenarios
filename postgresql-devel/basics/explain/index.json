@@ -1,0 +1,32 @@
+{
+  "title": "Using Explain to Write Better Queries",
+  "description": "Module on using EXPLAIN and EXPLAIN ANALYZE to diagnose and understand your queries",
+  "difficulty": "Intermediate",
+  "time": "15 minutes",
+  "details": {
+    "steps": [
+      {"title": "Understand Explain Output", "text": "01-explain-basic.md"},
+      {"title": "Using Explain to Get Actual Results", "text": "02-explain-analyze.md"},
+      {"title": "More In Depth Examples", "text": "03-better-examples.md"},
+      {"title": "Other Tools you can use With Analyze", "text": "04-other-tools.md"}
+    ],
+    "intro": {
+      "courseData": "env-init.sh",
+      "code": "set-env.sh",
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "terminal",
+    "dashboards": [
+    ]
+  },
+  "backend": {
+    "imageid": "crunchydata-single1"
+  }
+}

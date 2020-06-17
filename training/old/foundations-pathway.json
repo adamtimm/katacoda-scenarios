@@ -1,0 +1,24 @@
+{
+  "title": "Foundations Workshop",
+  "description": "",
+  "courses": [
+    {
+      "pathway_id": "crunchydata/workshops",
+      "id": "pitr",
+      "course_id": "pitr",
+      "title": "PostgreSQL Point In Time Recovery"
+    },
+    {
+      "pathway_id": "crunchydata/workshops",
+      "id": "replication",
+      "course_id": "replication",
+      "title": "PostgresSQL Replication"
+    },
+    {
+      "pathway_id": "crunchydata/workshops",
+      "id": "appdev-wkshp",
+      "course_id": "appdev-wkshp",
+      "title": "PostgreSQL for Application Development"
+    }
+  ]
+}

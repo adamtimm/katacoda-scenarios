@@ -1,0 +1,47 @@
+{
+  "title": "PostgreSQL Training",
+  "description": "Backup and Restore",
+  "difficulty": "Beginner",
+  "time": "20 minutes",
+  "details": {
+    "steps": [{
+      "title": "Step 1 - Run Command",
+      "text": "step1.md"
+			
+    },
+	  {
+	  	"title": "Step 2 - Create user ",
+			"text": "step2.md"
+	  },
+	  {
+	  	"title": "Step 3 - Load Data ",
+			"text": "step3.md"
+	  },
+	  {
+	  	"title": "Step 4 - pgbackrest ",
+			"text": "step4.md"
+	  },
+	  {
+	  	"title": "Step 4 - restore ",
+			"text": "restore.md"
+	  },
+	  {
+	  	"title": "Step 4 - PITR ",
+			"text": "pitr.md"
+	  }],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "crunchydata-single1"
+  }
+}

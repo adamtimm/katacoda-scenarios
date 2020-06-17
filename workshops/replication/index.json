@@ -1,0 +1,39 @@
+{
+  "title": "PostgreSQL Replication",
+  "description": "How to setup streaming replication",
+  "difficulty": "Beginner",
+  "time": "10 minutes",
+  "details": {
+    "steps": [{
+      "title": "Step 1 - Run Command",
+      "text": "step1.md"
+			
+    },
+	  {
+	  	"title": "Step 2 - Create user ",
+			"text": "step2.md"
+	  },
+	  {
+	  	"title": "Step 3 - Load Data ",
+			"text": "step3.md"
+	  },
+	  {
+	  	"title": "Step 5 - replication ",
+			"text": "replication.md"
+	  }],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "crunchydata-single1"
+  }
+}

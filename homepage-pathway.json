@@ -1,0 +1,27 @@
+{
+  "title": "CrunchyData Learning Portal",
+  "private": true,
+  "courses": [
+    {
+      "external_link": "https://learn.crunchydata.com/pg-administration/",
+      "title": "PostgreSQL Administration",
+      "action": "Start Course"
+    },
+    {
+      "external_link": "https://learn.crunchydata.com/postgresql-devel",
+      "title": "PostgreSQL for Application Developers",
+      "action": "Start Course"
+    },
+    {
+      "external_link": "https://learn.crunchydata.com/postgis",
+      "title": "PostGIS",
+      "action": "Start Course"
+    },
+    {
+      "external_link": "https://learn.crunchydata.com/kube",
+      "title": "PostgreSQL for Kubernetes/OpenShift",
+      "action": "Start Course"
+    }
+
+  ]
+}
