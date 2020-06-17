@@ -19,3 +19,12 @@ It supports the [OGC API - Features](http://docs.opengeospatial.org/is/17-069r3/
 * Full-featured HTTP support
   * CORS support with configurable Allowed Origins
   * GZIP response encoding
+
+This exercise will show you the steps to take to add pg_featureserv to your PostGIS implementation. 
+
+To add pg_featureserv to your PostGIS database, you need to either download the [source code](https://github.com/CrunchyData/pg_featureserv), download the binaries, or one of our supported containers. We've already pre-staged the container of pg_featureserv for this scenario. 
+
+To add the container to your postgis implentation, you'll need the connection info and username and password. 
+
+```docker run -p 9000:9000 --env=DATABASE_URL=postgres://groot:password@172.17.0.2/nyc timmam/pg_featureserv:Katacoda```{{execute}}
+
