@@ -19,3 +19,4 @@ clear
 PGPASSWORD="password" psql -h localhost -U groot nyc
 
 docker pull timmam/pg_tileserv:Katacoda
+

@@ -12,5 +12,5 @@ To add pg_tileserv to your PostGIS database, you need to either download the [so
 
 To add the container to your postgis implentation, you'll need the connection info and username and password. 
 
-docker run -p 7800:7800 timmam/pg_tileserv:Katacoda 
+```docker run -p 7800:7800 --env=DATABASE_URL=postgres://groot:password@172.17.0.2/nyc timmam/pg_tileserv:Katacoda```{{execute}}
 
