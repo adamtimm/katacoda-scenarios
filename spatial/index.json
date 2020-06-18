@@ -1,11 +1,11 @@
 {
 "title": "pg_tileserv and pg_featureserv",
-"description": "5 Service enabling your spatial data with pg_tileserv and pg_featureserv",
+"description": "  s ssService enabling your spatial data with pg_tileserv and pg_featureserv",
 "difficulty": "beginner",
 "time": "5 minutes",
 "details": {
   "steps": [
-    {"title": "Vector Tiles", "text": "01-pg_tileserv.md"},
+    {"title": "Vector Tiles", "text": "01-vector_tiles.md"},
     {"title": "pg_tileserv", "text": "02-pg_tileserv.md"}
   ],
   "intro": {
