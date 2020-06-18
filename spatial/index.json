@@ -26,9 +26,7 @@
   "hideintro": true,
   "showdashboard": true,
   "dashboards": [
-      {"name": "pg_featureserv", "port": 9000},
-      {"name": "pg_tileserv", "port": 7800},
-      {"name": "pg_tileserv", "href": "https://[[HOST_SUBDOMAIN]]-7800-[[KATACODA_HOST]].environments.katacoda.com:7800", "port": 7800}],
+      {"name": "pg_featureserv", "port": 9000}],
   "uilayout": "terminal-iframe"
 },
 "backend": {
