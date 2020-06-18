@@ -23,16 +23,13 @@
     }
   },
   "environment": {
+    "hideintro": true,
     "showdashboard": true,
     "dashboards": [
         {"name": "URL", "href": "https://www.katacoda.com"},
-        {"name": "Port 7800", "port": 7800},
+        {"name": "Port 80", "port": 80},
         {"name": "Placeholder", "href": "https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/somepage", "port": 8080}],
-    "uilayout": "terminal-iframe",
-    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n",
-    "terminals": [
-      {"name": "Terminal 2", "target": "host01"}
-    ]
+    "uilayout": "terminal-iframe"
   },
   "backend": {
     "imageid": "crunchydata-single1"
