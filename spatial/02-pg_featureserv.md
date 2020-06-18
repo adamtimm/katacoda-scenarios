@@ -26,5 +26,5 @@ To add pg_featureserv to your PostGIS database, you need to either download the 
 
 To add the container to your postgis implentation, you'll need the connection info and username and password. 
 
-```docker run -p 9000:9000 --env=DATABASE_URL=postgres://groot:password@172.17.0.2/nyc timmam/pg_featureserv:Katacoda```{{execute}}
+```docker run -p 9000:9000 --env=DATABASE_URL=postgres://groot:password@172.18.0.2/nyc timmam/pg_featureserv:Katacoda```{{execute}}
 

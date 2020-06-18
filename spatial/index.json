@@ -1,6 +1,6 @@
   {
   "title": "pg_tileserv and pg_featureserv",
-  "description": "4 Service enabling your spatial data with pg_tileserv and pg_featureserv",
+  "description": "5 Service enabling your spatial data with pg_tileserv and pg_featureserv",
   "difficulty": "beginner",
   "time": "5 minutes",
   "details": {
@@ -23,7 +23,12 @@
     }
   },
   "environment": {
-    "uilayout": "terminal",
+    "showdashboard": true,
+    "dashboards": [
+        {"name": "URL", "href": "https://www.katacoda.com"},
+        {"name": "Port 7800", "port": 7800},
+        {"name": "Placeholder", "href": "https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/somepage", "port": 8080}],
+    "uilayout": "terminal-iframe",
     "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n",
     "terminals": [
       {"name": "Terminal 2", "target": "host01"}
@@ -33,3 +38,7 @@
     "imageid": "crunchydata-single1"
   }
 }
+"environment": {
+  "hideintro": true,
+  
+},
