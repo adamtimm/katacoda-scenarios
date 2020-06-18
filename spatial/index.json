@@ -1,37 +1,37 @@
-  {
-  "title": "pg_tileserv and pg_featureserv",
-  "description": "5 Service enabling your spatial data with pg_tileserv and pg_featureserv",
-  "difficulty": "beginner",
-  "time": "5 minutes",
-  "details": {
-    "steps": [
-      {"title": "pg_tileserv", "text": "01-pg_tileserv.md"},
-      {"title": "pg_featureserv", "text": "02-pg_featureserv.md"}
-    ],
-    "intro": {
-      "courseData": "env-init.sh",
-      "code": "set-env.sh",
-      "text": "intro.md",
-      "credits": ""
-    },
-    "finish": {
-      "text": "finish.md"
-    },
-    "assets": {
-      "client": [
-      ]
-    }
+{
+"title": "pg_tileserv and pg_featureserv",
+"description": "5 Service enabling your spatial data with pg_tileserv and pg_featureserv",
+"difficulty": "beginner",
+"time": "5 minutes",
+"details": {
+  "steps": [
+    {"title": "pg_tileserv", "text": "01-pg_tileserv.md"},
+    {"title": "pg_featureserv", "text": "02-pg_featureserv.md"}
+  ],
+  "intro": {
+    "courseData": "env-init.sh",
+    "code": "set-env.sh",
+    "text": "intro.md",
+    "credits": ""
   },
-  "environment": {
-    "hideintro": true,
-    "showdashboard": true,
-    "dashboards": [
-        {"name": "URL", "href": "https://www.katacoda.com"},
-        {"name": "Port 80", "port": 80},
-        {"name": "Placeholder", "href": "https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/somepage", "port": 8080}],
-    "uilayout": "terminal-iframe"
+  "finish": {
+    "text": "finish.md"
   },
-  "backend": {
-    "imageid": "crunchydata-single1"
+  "assets": {
+    "client": [
+    ]
+  }
+},
+"environment": {
+  "hideintro": true,
+  "showdashboard": true,
+  "dashboards": [
+      {"name": "URL", "href": "https://www.katacoda.com"},
+      {"name": "Port 80", "port": 80},
+      {"name": "Placeholder", "href": "https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/somepage", "port": 8080}],
+  "uilayout": "terminal-iframe"
+},
+"backend": {
+  "imageid": "crunchydata-single1"
   }
 }
