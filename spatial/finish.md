@@ -1,1 +1,3 @@
-You're done!
+You've completed this exercise. Seemed short right? That's because it is. This exercise is ment to show you how easily and quickly you can add pg_tileserv to your exisitng PostGIS implentation to service enable your spatial data. 
+
+From here you can now add these vector tiles as layers to your web-map. Common implementations are OpenLayers or Leaflet. That get's into topics that are beyond the scope of this exercise. You can also add functions to your database to do more complex geospatial analysis in the database and have them exposed as vector tiles. We encourage you to check out our other PostGIS exercises for further information on the different type of analysis and functions you can create.
