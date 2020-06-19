@@ -1,12 +1,12 @@
 {
-"title": "pg_tileserv",
-"description": "Service enabling your spatial data with pg_tileserv.",
+"title": "pg_featureserv",
+"description": "Service enabling your spatial data with pg_featureserv",
 "difficulty": "beginner",
 "time": "5 minutes",
 "details": {
   "steps": [
-    {"title": "Vector Tiles", "text": "01-vector_tiles.md"},
-    {"title": "pg_tileserv", "text": "02-pg_tileserv.md"}
+    {"title": "Web Features", "text": "01-pg_featureserv.md"},
+    {"title": "pg_featureserv", "text": "02-pg_featureserv_exercise.md"}
   ],
   "intro": {
     "courseData": "env-init.sh",
@@ -26,7 +26,7 @@
   "hideintro": true,
   "showdashboard": true,
   "dashboards": [
-      {"name": "pg_tileserv", "port": 7800}],
+      {"name": "pg_featureserv", "port": 9000}],
   "uilayout": "terminal-iframe"
 },
 "backend": {

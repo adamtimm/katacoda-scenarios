@@ -1,6 +1,6 @@
 # pg_featureserv
 
-A lightweight RESTful geospatial feature server for [PostGIS](https://postgis.net/), written in [Go](https://golang.org/).
+Pg_featureserv is a lightweight RESTful geospatial feature server for [PostGIS](https://postgis.net/), written in [Go](https://golang.org/).
 It supports the [OGC API - Features](http://docs.opengeospatial.org/is/17-069r3/17-069r3.html) REST API standard.
 
 ## Features
@@ -19,12 +19,4 @@ It supports the [OGC API - Features](http://docs.opengeospatial.org/is/17-069r3/
 * Full-featured HTTP support
   * CORS support with configurable Allowed Origins
   * GZIP response encoding
-
-This exercise will show you the steps to take to add pg_featureserv to your PostGIS implementation. 
-
-To add pg_featureserv to your PostGIS database, you need to either download the [source code](https://github.com/CrunchyData/pg_featureserv), download the binaries, or one of our supported containers. We've already pre-staged the container of pg_featureserv for this scenario. 
-
-To add the container to your postgis implentation, you'll need the connection info and username and password. 
-
-```docker run -p 9000:9000 --env=DATABASE_URL=postgres://groot:password@172.18.0.2/nyc timmam/pg_featureserv:Katacoda```{{execute}}
 
