@@ -1,3 +1,7 @@
+# Web Feature Service
+
+Put simply, [Web Feature Services](https://www.ogc.org/standards/wfs) are a way to query and display data with spatial attributes through a web interface. Tradional web architectures have required a heavy middle tier software application to connect and configure the serving of your spatial data. These traditional architectures don't lend themselves to modern container platforms.  
+
 # pg_featureserv
 
 Pg_featureserv is a lightweight RESTful geospatial feature server for [PostGIS](https://postgis.net/), written in [Go](https://golang.org/).
