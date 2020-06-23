@@ -27,8 +27,9 @@
   "hideintro": false,
   "showdashboard": true,
   "dashboards": [
-      {"name": "pg_featureserv", "port": 9000},
-      {"name": "Terminal 2", "target": "host01"}],
+      {"name": "pg_featureserv", "port": 9000}],
+  "terminals": [
+        {"name": "Terminal 2", "target": "host01"}],
   "uilayout": "terminal-iframe"
 },
 "backend": {
