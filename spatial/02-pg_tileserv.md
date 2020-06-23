@@ -9,3 +9,5 @@ To add the container to your postgis implentation, you'll need the connection in
 ```docker run -p 7800:7800 --env=DATABASE_URL=postgres://groot:password@172.18.0.2/nyc timmam/pg_tileserv:Katacoda```{{execute}}
 
 Now, if you look at the pg_tileserv tab again, you'll see the default UI and all of the nyc data being delivered as vector tiles. If you click on the preview link, you can see the vector tiles. You can also click on any of the vector tiles and see all of the attribute information contained in the database. 
+
+Next, we'll show you how you can add a simple user defined function and have it available via pg_tileserv.
