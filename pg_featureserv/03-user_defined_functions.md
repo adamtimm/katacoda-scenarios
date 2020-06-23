@@ -1,3 +1,5 @@
+# (Be sure to run these command in Terminal 2)
+
 To create a userdefined function, first we must log into the running database
 
 ```PGPASSWORD="password" psql -h localhost -U groot nyc```{{execute}}
@@ -23,8 +25,7 @@ END;
 $$
 PARALLEL SAFE
 STABLE
-LANGUAGE plpgsql;
-```{{execute}}
+LANGUAGE plpgsql;```{{execute}}
 
 Now if you return to the pg_featureserv tab, you can look under the functions link and you'll see your newly created function.
 
