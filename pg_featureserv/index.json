@@ -29,7 +29,7 @@
   "dashboards": [
       {"name": "pg_featureserv", "port": 9000}],
   "terminals": [
-        {"name": "Terminal 2", "target": "host01"}],
+        {"name": "Terminal Two", "target": "host01"}],
   "uilayout": "terminal-iframe"
 },
 "backend": {
