@@ -10,8 +10,7 @@ In order to have pg_featureserv publish a user defined function, we first need t
 
 Now that we've created the schema, we can add our function. This function does a query aganist US Census Block borough names and returns the name of the borough and Census Block geomtries that intersect with the subway geometry.
 
-```
-CREATE or REPLACE FUNCTION postgisftw.nyc_katacoda(stop_name character varying DEFAULT 'Bronx Park East')
+```CREATE or REPLACE FUNCTION postgisftw.nyc_katacoda(stop_name character varying DEFAULT 'Bronx Park East')
 RETURNS TABLE (station_name character varying, geom geometry)
 AS $$
 BEGIN
@@ -26,8 +25,7 @@ PARALLEL SAFE
 STABLE
 LANGUAGE plpgsql;
 ANALYZE;
-SELECT * FROM postgisftw.nyc_katacoda('Bronx Park East');``` 
-{{execute}}
+SELECT * FROM postgisftw.nyc_katacoda('Bronx Park East');```{{execute}}
 
 Now if you return to the pg_featureserv tab, you can look under the functions link and you'll see your newly created function.
 
