@@ -1,6 +1,6 @@
 To create a userdefined function, first we must log into the running database
 
-```PGPASSWORD="password" psql -h localhost -U postgres nyc```{{execute}}
+```PGPASSWORD="password" psql -h localhost -U groot nyc```{{execute}}
 
 
 
