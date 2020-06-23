@@ -1,4 +1,4 @@
-# Spatial Relationships
+# Intro to pg_featureserv
 
 This scenario gives you an introduction to pg_featureserv.
 
