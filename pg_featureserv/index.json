@@ -24,10 +24,11 @@
   }
 },
 "environment": {
-  "hideintro": true,
+  "hideintro": false,
   "showdashboard": true,
   "dashboards": [
-      {"name": "pg_featureserv", "port": 9000}],
+      {"name": "pg_featureserv", "port": 9000},
+      {"name": "tab2"}],
   "uilayout": "terminal-iframe"
 },
 "backend": {
