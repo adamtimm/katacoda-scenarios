@@ -24,8 +24,7 @@ $$
 PARALLEL SAFE
 STABLE
 LANGUAGE plpgsql;
-ANALYZE;
-SELECT * FROM postgisftw.nyc_katacoda('Bronx Park East');```{{execute}}
+```{{execute}}
 
 Now if you return to the pg_featureserv tab, you can look under the functions link and you'll see your newly created function.
 
