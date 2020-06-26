@@ -14,7 +14,7 @@ Now that we've created the schema, we can add our function. But before we do tha
 
 First, let's take a look at what tables we have.
 
-```\dt;```{{execute}} 
+```\dt``` {{execute}} 
 
 
 You can see we have 6 tables with information about New York city. If you look at the pg_featureserv tab > collections, these tables are also available through pg_feautreserv. 
