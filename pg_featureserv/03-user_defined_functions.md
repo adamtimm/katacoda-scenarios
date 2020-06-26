@@ -14,7 +14,7 @@ Now that we've created the schema, we can add our function. But before we do tha
 
 First, let's take a look at what tables we have.
 
-```SELECT * FROM pg_catalog.pg_tables WHERE schemaname != 'pg_catalog' AND schemaname != 'information_schema';```{{execute}} 
+```SELECT * FROM pg_catalog.pg_tables WHERE schemaname = 'public' AND schemaname != 'information_schema' ;```{{execute}} 
 
 You can see we have 6 tables with information about New York city. If you look at the pg_featureserv tab > collections, these tables are also available through pg_feautreserv. 
 
