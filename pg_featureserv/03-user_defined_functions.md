@@ -16,12 +16,11 @@ First, let's take a look at what tables we have.
 
 ```\dt```{{execute}}
 
-You can see we have 6 tables with information about New York city.
+You can see we have 6 tables with information about New York city. If you look at the pg_featureserv tab > collections, these tables are also available through pg_feautreserv. 
 
 Now, let's take a quick look at one of the tables we'll use in the function.
 
-```SELECT DISTINCT * FROM public.nyc_subway_stations
-ORDER BY name ASC LIMIT 40;```{{execute}}
+```SELECT DISTINCT * FROM public.nyc_subway_stations ORDER BY name ASC LIMIT 40;```{{execute}}
 
 You can see there is a variety of data in the table, but we will only use a subesection of this table and the US Census Block table. Now, let's get back to the function. 
 
