@@ -1,6 +1,6 @@
-# (Be sure to run these command in Terminal 2)
+# (Be sure to run these commands in Terminal 2)
 
-To create a userdefined function, first we must log into the running database
+To create a user defined function, first we must log into the running database
 
 ```PGPASSWORD="password" psql -h localhost -U groot nyc```{{execute}}
 
@@ -14,7 +14,8 @@ Now that we've created the schema, we can add our function. But before we do tha
 
 First, let's take a look at what tables we have.
 
-```\dt```{{execute}}
+```\dt;```{{execute}} 
+
 
 You can see we have 6 tables with information about New York city. If you look at the pg_featureserv tab > collections, these tables are also available through pg_feautreserv. 
 
