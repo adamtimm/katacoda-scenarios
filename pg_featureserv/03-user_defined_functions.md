@@ -20,7 +20,7 @@ You can see we have 6 tables with information about New York city. If you look a
 
 Now, let's take a quick look at one of the tables we'll use in the function.
 
-```SELECT DISTINCT * FROM public.nyc_subway_stations ORDER BY name ASC LIMIT 40;```{{execute}}
+```SELECT DISTINCT * FROM public.nyc_subway_stations ORDER BY name ASC LIMIT 10;```{{execute}}
 
 You can see there is a variety of data in the table, but we will only use a subesection of this table and the US Census Block table. Now, let's get back to the function. 
 
@@ -48,5 +48,5 @@ To show it's live, let's get some station names from our subway stations table
 ```SELECT DISTINCT name FROM public.nyc_subway_stations
 ORDER BY name ASC LIMIT 40;```{{execute}}
 
-You can grab one of these names and put it in the query field on the pg_featureserv tab.
+You can grab one of these names and put it in the ```stop_name``` field on the pg_featureserv tab (click on ```view``` to view the output geometries).
 
