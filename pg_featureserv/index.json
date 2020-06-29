@@ -2,7 +2,7 @@
 "title": "pg_featureserv",
 "description": "Service enabling your spatial data with pg_featureserv",
 "difficulty": "beginner",
-"time": "5 minutes",
+"time": "15 minutes",
 "details": {
   "steps": [
     {"title": "pg_featureserv", "text": "01-pg_featureserv.md"},
