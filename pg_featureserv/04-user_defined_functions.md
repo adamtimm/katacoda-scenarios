@@ -2,6 +2,8 @@
 
 To create a user defined function, first we must log into the running database
 
+**WAIT!** Before you click the box below, make sure you click on ```Terminal 2```. 
+
 ```PGPASSWORD="password" psql -h localhost -U groot nyc```{{execute}}
 
 

@@ -1,5 +1,3 @@
-# How pg_featureserv works
-
 Now you've seen how easy it is to add pg_featureserv to your PostGIS implementation. Let's take a min to explain what's going on behind the scenes, and the layour of the default UI. 
 
 # Exposing your data as spatial features
