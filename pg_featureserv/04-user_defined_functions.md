@@ -20,6 +20,8 @@ First, let's take a look at what tables we have.
 
 You can see we have 6 tables with information about New York city. If you look at the pg_featureserv tab > collections, these tables are also available through pg_feautreserv. 
 
+**Click back to Terminal 2**
+
 Now, let's take a quick look at one of the tables we'll use in the function.
 
 ```SELECT DISTINCT * FROM public.nyc_subway_stations ORDER BY name ASC LIMIT 10;```{{execute}}
