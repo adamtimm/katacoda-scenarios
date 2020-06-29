@@ -10,4 +10,4 @@ The black box below allows you to click on it to have the code execute in the ri
 
 ```docker run -p 9000:9000 --env=DATABASE_URL=postgres://groot:password@172.18.0.2/nyc timmam/pg_featureserv:Katacoda```{{execute}}
 
-Now, if you look at the pg_featureserv tab again, you'll see the default UI and all of the nyc data being delivered as features. If you click on the preview link, you can see the features. You can also click on any of the features and see all of the attribute information contained in the database. If you pop the tab out of the panel, you can also see the full url for the api that was created. 
+Now, if you look at the pg_featureserv tab again, you'll see that it has scucessfully connected to the default UI. We'll go over some additional information about how pg_featureserv works and the basic layout of the UI on the next pages.
