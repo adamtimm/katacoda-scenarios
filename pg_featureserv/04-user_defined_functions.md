@@ -60,7 +60,7 @@ Now if you return to the pg_featureserv tab, you can look under the functions li
 To show it's live, let's get some station names from our subway stations table
 
 ```SELECT DISTINCT name FROM public.nyc_subway_stations
-ORDER BY name ASC LIMIT 40;```{{execute}}
+ORDER BY name ASC LIMIT 30;```{{execute}}
 
 You can grab one of these names and put it in the ```stop_name``` field on the pg_featureserv tab (click on ```view``` to view the output geometries).
 
