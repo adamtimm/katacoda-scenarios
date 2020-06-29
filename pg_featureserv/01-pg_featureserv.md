@@ -1,15 +1,13 @@
-# pg_featureserv
+This exercise will show you the steps to take to add pg_featureserv to your PostGIS implementation. 
 
-Pg_featureserv is a lightweight RESTful geospatial feature server for [PostGIS](https://postgis.net/), written in [Go](https://golang.org/).
-It supports the [OGC API - Features](http://docs.opengeospatial.org/is/17-069r3/17-069r3.html) REST API standard.
+First, take a look at the tab to the right called "pg_featureserv". You'll see that it's still waiting for an available connection on port 9000, the port that pg_featureserv serves data on. That's because we haven't added pg_featureserv to our PostGIS implementation yet. Let's do that now.
 
-Pg_featureserv implements the [OGC API - Features](http://docs.opengeospatial.org/is/17-069r3/17-069r3.html) standard. It uses PostGIS to provide geospatial functionality:
-  * Transforming geometry data into the output coordinate system
-  * Marshalling feature data into GeoJSON
+To add pg_featureserv to your PostGIS database, you need to either download the [source code](https://github.com/CrunchyData/pg_featureserv), download the binaries, or one of our supported containers. We've already pre-staged the container of pg_featureserv for this scenario.
 
-Pg_featureserv requires PostGIS 2.4 or greater to operate.
+To add the container to your postgis implementation, you'll need the connection info and username and password (from the first screen). 
 
-That's great, but I'm sure you're asking "What does it do? How does it work?" pg_featureserv works by 1) taking an http request and converting it to the neccessary SQL to have PostGIS return the spatial data as a feature. 2) it connects to the target PostGIS database via a Database URL connection string. It runs in a completely stateless manner, any configuration of the data layers is driven by the underlying database. This means that data scientists, analysts and stewards can focus on maintaining their data and data structures. 
+The black box below allows you to click on it to have the code execute in the right hand terminal. Be sure to click on the ```Terminal``` tab before click on the box to make sure the code executes in the correct tab. You also have the option of copying and pasting the code, or typing it yourself in the ```Terminal``` tab.
 
-Now, let's get to showing you how easily it can be added to your PostGIS implementation and expose features. 
+```docker run -p 9000:9000 --env=DATABASE_URL=postgres://groot:password@172.18.0.2/nyc timmam/pg_featureserv:Katacoda```{{execute}}
 
+Now, if you look at the pg_featureserv tab again, you'll see the default UI and all of the nyc data being delivered as features. If you click on the preview link, you can see the features. You can also click on any of the features and see all of the attribute information contained in the database. If you pop the tab out of the panel, you can also see the full url for the api that was created. 
