@@ -6,8 +6,6 @@ To create a user defined function, first we must log into the running database
 
 ```PGPASSWORD="password" psql -h localhost -U groot nyc```{{execute}}
 
-
-
 In order to have pg_featureserv publish a user defined function, we first need to create the schema that pg_featureserv looks for (note: we are planning to expand the schemas available to pg_featureserv, but for now it is limited to this schema). The schema needs to be called ```postgisftw``` (aka "postgis for the web")
 
 ```CREATE SCHEMA postgisftw;```{{execute}}
@@ -28,7 +26,19 @@ Now, let's take a quick look at one of the tables we'll use in the function.
 
 You can see there is a variety of data in the table, but we will only use a subesection of this table and the US Census Block table. Now, let's get back to the function. 
 
+Before you create the function, **Click on the pg_featureserv tab** and click on ```view functions```. You can see there aren't any funcitons available. 
+
+**Click back on Terminal 2**
+
+Now we'll create the function.
+
 This function does a query aganist US Census Block borough names and returns the name of the borough and Census Block geomtries that intersect with the subway geometry.
+
+**Bonus Content** 
+
+The US Census Bureau is responsible for conducting the census of the US population every 10 years. (We just had one in 2020) This information is then used by the US government to make all sorts of decisions to regarding the use and dispersment of tax dollars. But did you know they also make all this information publicly available? You can download this data and use it for your own analysis. The query we're using here could potentially be the first step in determining the population demographic around certain subway stops with in a walking radius. You could then take add additional queries to further analyze the data. 
+
+**Back to the function**
 
 ```CREATE or REPLACE FUNCTION postgisftw.nyc_katacoda(stop_name character varying DEFAULT 'Bronx Park East')
 RETURNS TABLE (borough_name character varying, geom geometry)
