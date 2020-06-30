@@ -2,6 +2,8 @@ This exercise will show you the steps to take to add pg_featureserv to your Post
 
 First, take a look at the tab to the right called "pg_featureserv". You'll see that it's still waiting for an available connection on port 9000, the port that pg_featureserv serves data on. That's because we haven't added pg_featureserv to our PostGIS implementation yet. Let's do that now.
 
+**Click Back to ```Terminal```**
+
 To add pg_featureserv to your PostGIS database, you need to either download the [source code](https://github.com/CrunchyData/pg_featureserv), download the binaries, or one of our supported containers. We've already pre-staged the container of pg_featureserv for this scenario.
 
 To add the container to your postgis implementation, you'll need the connection info and username and password (from the first screen). 
