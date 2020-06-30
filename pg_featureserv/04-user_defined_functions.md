@@ -36,7 +36,7 @@ This function does a query aganist US Census Block borough names and returns the
 
 **Bonus Content** 
 
-The US Census Bureau is responsible for conducting the census of the US population every 10 years. (We just had one in 2020) This information is then used by the US government to make all sorts of decisions to regarding the use and dispersment of tax dollars. But did you know they also make all this information publicly available? You can download this data and use it for your own analysis. The query we're using here could potentially be the first step in determining the population demographic around certain subway stops with in a walking radius. You could then take add additional queries to further analyze the data. 
+The US Census Bureau is responsible for conducting the census of the US population every 10 years. (We just had one in 2020) This information is then used by the US government to make all sorts of decisions to regarding the use and dispersment of tax dollars. But did you know they also make all this information publicly available? You can download this data and use it for your own analysis. The query we're using here could potentially be the first step in determining the population demographic around certain subway stops with in a walking radius. You could then add additional queries to further analyze the data. 
 
 **Back to the function**
 
