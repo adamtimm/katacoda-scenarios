@@ -1,8 +1,8 @@
 This exercise will show you the steps to take to add pg_tileserv to your PostGIS implementation. 
 
-First, take a look at the tab to the right called "pg_tileserv". You'll see that it's still waiting for an available conneciton on port 7800, the port that pg_tileserv serves data on. That's because we haven't added pg_tileserv to our PostGIS implementation yet. Let's do that now.
+First, take a look at the tab to the right called "pg_tileserv". You'll see that it's still waiting for an available conneciton on port 7800, the port that pg_tileserv serves data on. That's because we haven't added pg_tileserv to our PostGIS implementation yet. Let's do that now (click back to ```Terminal```)
 
-To add pg_tileserv to your PostGIS database, you need to either download the [source code](https://github.com/CrunchyData/pg_tileserv), download the binaries, or one of our supported containers. We've already pre-staged the container of pg_tileserv for this scenario. 
+To add pg_tileserv to your PostGIS database, you need to either download the [source code](https://github.com/CrunchyData/pg_tileserv), the binaries, or one of our supported containers. We'll use the container version of pg_tileserv for this scenario. 
 
 To add the container to your postgis implentation, you'll need the connection info and username and password (from the first screen). 
 

@@ -24,10 +24,12 @@
   }
 },
 "environment": {
-  "hideintro": true,
+  "hideintro": false,
   "showdashboard": true,
   "dashboards": [
       {"name": "pg_tileserv", "port": 7800}],
+  "terminals": [
+        {"name": "Terminal 2", "target": "host01"}],
   "uilayout": "terminal-iframe"
 },
 "backend": {
