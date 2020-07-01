@@ -20,6 +20,12 @@ First, let's take a look at what tables we have.
 
 You can see we have six tables with information about New York City. If you look at the pg_featureserv tab > Collections, those same tables are also available in the pg_featureserv UI. 
 
+### A bit of background on census data
+
+The US Census Bureau is responsible for conducting the census of the US population every 10 years. (We just had one in 2020.) This information is then used by the US government to make all sorts of decisions to regarding the use and dispersment of tax dollars. But did you know they also make all this information publicly available? You can download this data and use it for your own analysis. 
+
+The query in the funciton below could potentially be the first step in determining the population demographic (i.e. age, race, gender, etc) around certain subway stops within a walking radius. You could then add additional queries to further analyze the data (i.e. median household income in the area, time table of when the subway stops, peak rush hour traffic, etc)
+
 Now, let's go back to the **Terminal 2** tab, and we'll take a quick look at one of the tables we'll use in the function.
 
 ```SELECT DISTINCT * FROM public.nyc_subway_stations ORDER BY name ASC LIMIT 10;```{{execute}}
@@ -58,8 +64,4 @@ ORDER BY name ASC LIMIT 30;```{{execute}}
 
 Try grabbing one of these names (e.g. `14th St`), and in the pg_featureserv UI, enter that name in the ```stop_name``` Function Args field on the `nyc_katacoda` function view. (Click `Requery` to view the output geometries.)
 
-### A bit of background on census data
 
-The US Census Bureau is responsible for conducting the census of the US population every 10 years. (We just had one in 2020.) This information is then used by the US government to make all sorts of decisions to regarding the use and dispersment of tax dollars. But did you know they also make all this information publicly available? You can download this data and use it for your own analysis. 
-
-The query we're using here could potentially be the first step in determining the population demographic around certain subway stops within a walking radius. You could then add additional queries to further analyze the data. 

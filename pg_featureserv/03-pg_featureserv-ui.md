@@ -6,7 +6,7 @@ With that in mind, click on the ```pg_featureserv``` tab and we'll take a look a
 
 ### OpenAPI Schema
 
-If you click on ```OpenAPI Schema``` it will take you to the built in Swagger documentation for the full API spec.
+If you click on ```OpenAPI Schema``` it will take you to the built in Swagger documentation for the full API spec. (Click your browser's "back" button to return to the pg_featureserv home screen)
 
 ### Conformance
 
