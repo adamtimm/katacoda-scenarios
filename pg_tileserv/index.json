@@ -2,7 +2,7 @@
 "title": "pg_tileserv",
 "description": "Service enabling your spatial data with pg_tileserv.",
 "difficulty": "beginner",
-"time": "5 minutes",
+"time": "15 minutes",
 "details": {
   "steps": [
     {"title": "Vector Tiles", "text": "01-vector_tiles.md"},
