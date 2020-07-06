@@ -164,5 +164,5 @@ PARALLEL SAFE;
 COMMENT ON FUNCTION public.hexagons IS 'Hex coverage dynamically generated. Step parameter determines how approximately many hexes (2^step) to generate per tile.';
 ```{{execute}}
 
-Now, go back to the pg_tileserv tab and you should now see two new functions.
+Now, go back to the pg_tileserv tab and you should now see two new functions. (You may need to hit the refresh symbol in the pg_tileserv tab.)
 
