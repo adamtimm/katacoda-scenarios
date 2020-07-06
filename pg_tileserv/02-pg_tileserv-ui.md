@@ -2,29 +2,17 @@ Now we want to give you a short tour of the pg_tileserv user interface (UI). The
 
 With that in mind, click on the ```pg_tileserv``` tab and we'll take a look around.
 
-## index
+## Service Metadata
 
-## Collections and Functions
+The service metadata provides basic information in JSON format to make it discoverable by other services. 
 
-### Collections
+## Table Layers
 
-Collections will list all of the tables that contain a valid geometry column (```geom```) that the pg_featureserv connecting account has permissions to. If a table is missing from this view that you were expecting to see, you can try the following troubleshooting steps:  
+Table layers will list all of the tables that it has access to that contain a valid geometry column (```geom```). If a table is missing from this view that you were expecting to see, you can try the following troubleshooting steps:  
 
 1. Verify user roles/permissions for the service account.  
 2. Verify the table has a geometry column and the geometry is valid. 
 
-### Functions
+## Function Layers
 
-Functions is where you will find any user-defined functions made available to pg_featureserv. Note that we haven't added any functions yet, so this page should be empty. We'll go into user-defined functions in more detail on the next page. 
-
-**NOTE:** pg_featureserv only looks at the ```postgisftw``` schema for functions. More on that on the next page.
-
-## JSON and View
-
-### JSON
-
-If you click on a JSON link, it will take you to the full JSON response from the API for that particular path. As an example, clicking on JSON for Collections returns the response for `/collections`. This is what you will need/use for incorporating it into your user application. 
-
-### view
-
-Wiew (available under the Collections or Functions pages) will take you to a preview page that returns a limited set of features so you can verify that the features are being returned as expected. It comes with a basic basemap out of the box. 
+Functions is where you will find any user-defined functions made available to pg_tileserv. Note that we haven't added any functions yet, so this section should be empty. We'll go into user-defined functions in more detail on the next page. 
