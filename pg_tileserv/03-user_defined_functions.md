@@ -70,5 +70,68 @@ STRICT
 PARALLEL SAFE;
 ```{{execute}}
 
+Now we need to create the ```ST_TileEnvelope``` Function (we have to create it here since the version of PostGIS we're using in this container is Postgis 2.4. This function is included in Postgis 3.0+)
+
+
+```CREATE OR REPLACE
+FUNCTION ST_TileEnvelope(z integer, x integer, y integer)
+RETURNS geometry
+AS $$
+  DECLARE
+    size float8;
+    zp integer = pow(2, z);
+    gx float8;
+    gy float8;
+  BEGIN
+    IF y >= zp OR y < 0 OR x >= zp OR x < 0 THEN
+        RAISE EXCEPTION 'invalid tile coordinate (%, %, %)', z, x, y;
+    END IF;
+    size := 40075016.6855784 / zp;
+    gx := (size * x) - (40075016.6855784/2);
+    gy := (40075016.6855784/2) - (size * y);
+    RETURN ST_SetSRID(ST_MakeEnvelope(gx, gy, gx + size, gy - size), 3857);
+  END;
+$$
+LANGUAGE 'plpgsql'
+IMMUTABLE
+STRICT
+PARALLEL SAFE;
+```{{execute}}
+
+And finally we can pull them all together in a function that allows us to have dynamic hexagons as vector tiles.
+
+```
+CREATE OR REPLACE 
+FUNCTION public.hexagons(z integer, x integer, y integer, step integer default 4) 
+RETURNS bytea 
+AS $$ 
+WITH 
+bounds AS ( 
+    -- Convert tile coordinates to web mercator tile bounds 
+    SELECT ST_TileEnvelope(z, x, y) AS geom  
+ ),
+ rows AS (
+    -- All the hexes that interact with this tile 
+    SELECT h.i, h.j, h.geom 
+    FROM TileHexagons(z, x, y, step) h 
+ ), 
+ mvt AS ( 
+     -- Usual tile processing, ST_AsMVTGeom simplifies, quantizes, 
+     -- and clips to tile boundary 
+    SELECT ST_AsMVTGeom(rows.geom, bounds.geom) AS geom, 
+           rows.i, rows.j 
+    FROM rows, bounds 
+) 
+-- Generate MVT encoding of final input record 
+SELECT ST_AsMVT(mvt, 'public.hexagons') FROM mvt 
+$$ 
+LANGUAGE 'sql' 
+STABLE 
+STRICT 
+PARALLEL SAFE; 
+
+COMMENT ON FUNCTION public.hexagons IS 'Hex coverage dynamically generated. Step parameter determines how approximately many hexes (2^step) to generate per tile.';
+```{{execute}}
+
 Now, go back to the pg_tileserv tab and you should now see two new functions.
 
