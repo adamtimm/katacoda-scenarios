@@ -99,6 +99,37 @@ STRICT
 PARALLEL SAFE;
 ```{{execute}}
 
+Now we can create a function to generate hexagons for any sized tile.
+
+```
+CREATE OR REPLACE 
+FUNCTION tilehexagons(z integer, x integer, y integer, step integer, 
+                      OUT geom geometry(Polygon, 3857), OUT i integer, OUT j integer) 
+RETURNS SETOF record 
+AS $$ 
+    DECLARE 
+        bounds geometry; 
+        maxbounds geometry := ST_TileEnvelope(0, 0, 0); 
+        edge float8; 
+    BEGIN 
+    bounds := ST_TileEnvelope(z, x, y); 
+    edge := (ST_XMax(bounds) - ST_XMin(bounds)) / pow(2, step); 
+    FOR geom, i, j IN 
+    SELECT ST_SetSRID(hexagon(h.i, h.j, edge), 3857), h.i, h.j 
+    FROM hexagoncoordinates(bounds, edge) h 
+    LOOP 
+       IF maxbounds ~ geom AND bounds && geom THEN 
+            RETURN NEXT; 
+         END IF; 
+     END LOOP; 
+     END; 
+$$ 
+LANGUAGE 'plpgsql' 
+IMMUTABLE 
+STRICT 
+PARALLEL SAFE;
+```{{execute}}
+
 And finally we can pull them all together in a function that allows us to have dynamic hexagons as vector tiles.
 
 ```
