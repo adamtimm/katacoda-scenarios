@@ -1,16 +1,8 @@
-Now we want to give you a short tour of the pg_featureserv user interface (UI). The intent of the UI is to allow the user to quickly confirm the data is available through the service. It is not meant to be a finished UI for an end user application. 
+Now we want to give you a short tour of the pg_tileserv user interface (UI). The intent of the UI is to allow the user to quickly confirm the data is available through the service. It is not meant to be a finished UI for an end user application. 
 
-With that in mind, click on the ```pg_featureserv``` tab and we'll take a look around.
+With that in mind, click on the ```pg_tileserv``` tab and we'll take a look around.
 
-## OpenAPI Schema and Conformance
-
-### OpenAPI Schema
-
-If you click on ```OpenAPI Schema``` it will take you to the built in Swagger documentation for the full API spec. (Click your browser's "back" button to return to the pg_featureserv home screen)
-
-### Conformance
-
-The Conformance link will take you to the list of links that describe the OGC API for Features spec.
+## index
 
 ## Collections and Functions
 
