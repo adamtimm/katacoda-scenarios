@@ -129,7 +129,6 @@ LANGUAGE 'sql'
 STABLE 
 STRICT 
 PARALLEL SAFE; 
-
 COMMENT ON FUNCTION public.hexagons IS 'Hex coverage dynamically generated. Step parameter determines how approximately many hexes (2^step) to generate per tile.';
 ```{{execute}}
 
