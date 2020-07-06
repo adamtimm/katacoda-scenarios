@@ -73,7 +73,8 @@ PARALLEL SAFE;
 Now we need to create the ```ST_TileEnvelope``` Function (we have to create it here since the version of PostGIS we're using in this container is Postgis 2.4. This function is included in Postgis 3.0+)
 
 
-```CREATE OR REPLACE
+```
+CREATE OR REPLACE
 FUNCTION ST_TileEnvelope(z integer, x integer, y integer)
 RETURNS geometry
 AS $$
