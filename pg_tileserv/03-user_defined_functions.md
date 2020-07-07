@@ -166,3 +166,5 @@ COMMENT ON FUNCTION public.hexagons IS 'Hex coverage dynamically generated. Step
 
 Now, go back to the pg_tileserv tab and you should now see two new functions. (You may need to hit the refresh symbol in the pg_tileserv tab.)
 
+Now that you have these tiles, you could use them to do real-time filtering and analysis of data in your database. That is a more advanced use case that goes beyond the scope of this exercise.
+
