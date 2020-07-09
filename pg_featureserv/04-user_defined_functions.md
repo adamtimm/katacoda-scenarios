@@ -1,4 +1,4 @@
-All of the commands on this page should be run within Terminal 2.
+All of the commands on this page should be run within **Terminal 2**.
 
 ## `postgisftw` schema
 

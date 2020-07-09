@@ -1,4 +1,4 @@
-All of the commands on this page should be run within Terminal 2.
+All of the commands on this page should be run within **Terminal 2**.
 
 To create a user-defined function, first we must log into the running database.
 
@@ -8,7 +8,7 @@ To create a user-defined function, first we must log into the running database.
 
 ## Create a user-defined function
 
-For this part of the exercise, we'll use a couple of the functions from Paul Ramsey's blog post on [Serving Tiles with Dynamic Geometry](https://info.crunchydata.com/blog/tile-serving-with-dynamic-geometry).
+For this part of the exercise, we'll use a couple of the functions from Paul Ramsey's blog post on [Serving Tiles with Dynamic Geometry](https://info.crunchydata.com/blog/tile-serving-with-dynamic-geometry). We create four internal functions first and then pull them all together in one public-facing function that can be exposed through pg_tileserv. 
 
 First we need to create the hexagons.
 
@@ -40,7 +40,7 @@ STRICT
 PARALLEL SAFE;
 ```{{execute}}
 
-Then we'll fill tiles with those Hexagons.
+Then we'll fill tiles with those hexagons.
 
 ```
 CREATE OR REPLACE 
@@ -70,8 +70,7 @@ STRICT
 PARALLEL SAFE;
 ```{{execute}}
 
-Now we need to create the ```ST_TileEnvelope``` Function (we have to create it here since the version of PostGIS we're using in this container is Postgis 2.4. This function is included in Postgis 3.0+)
-
+Now we need to create the ```ST_TileEnvelope``` function. While this function is actually included in PostGIS 3.0+, we have to create it here since the version of PostGIS in this container is PostGIS 2.4. 
 
 ```
 CREATE OR REPLACE
@@ -130,7 +129,7 @@ STRICT
 PARALLEL SAFE;
 ```{{execute}}
 
-And finally we can pull them all together in a function that allows us to have dynamic hexagons as vector tiles.
+Finally, we can pull them all together in a function that allows us to have dynamic hexagons as vector tiles.
 
 ```
 CREATE OR REPLACE 
@@ -164,7 +163,6 @@ PARALLEL SAFE;
 COMMENT ON FUNCTION public.hexagons IS 'Hex coverage dynamically generated. Step parameter determines how approximately many hexes (2^step) to generate per tile.';
 ```{{execute}}
 
-Now, go back to the pg_tileserv tab and you should now see two new functions. (You may need to hit the refresh symbol in the pg_tileserv tab.)
+Now, go back to the pg_tileserv tab and you should now see the new `public.hexagons` function. (You may need to hit the refresh symbol in the pg_tileserv tab.) Despite having created a few intermediary functions, we only see the final function since it has the form `function(z integer, x integer, y integer, ...)` that returns an MVT `bytea`, so pg_tileserv knows to expose it as a function layer. 
 
 Now that you have these tiles, you could use them to do real-time filtering and analysis of data in your database. That is a more advanced use case that goes beyond the scope of this exercise.
-
